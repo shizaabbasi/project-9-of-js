@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2><u>Array sorting and mapping</u></h2>
+    <p>First we will crreate an an array , then we will map it out afterwards we will sort it in ascending and descending order.</p>
+    <p id="a"></p>
+    <script>
+        var x=[56,9,78,23,45,67,89,20,17,57,90];
+        document.write(x);//just an array
+        function shiza(v){
+    return v*1000;
+}
+var newarray=x.map(shiza);
+document.getElementById("a").innerHTML=newarray;//mapped array
+    </script>
+
+   <br> <button onclick="ascending()">Ascending order </button><br><br>
+    <button onclick="descending()">Descending order</button>
+    <p id="p"></p>
+    <script>
+        var points =[56,9,78,23,45,67,89,20,17,57,90];
+        document.getElementById("p").innerHTML=points;
+        function ascending(){
+            points.sort(function(a,b){return a-b});
+            document.getElementById("p").innerHTML=points;
+        }
+        function descending(){
+            points.sort(function(a,b){return b-a});
+            document.getElementById("p").innerHTML=points;//sorted array 
+        }
+    </script>
+</body>
+</html>
